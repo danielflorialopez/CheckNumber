@@ -4,6 +4,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * Classe per a testejar la classe CheckNumber. Té tres proves unitàries 
+ * per a provar si el número és positiu, negatiu o zero
+ * @author dani
+ *
+ */
 class TestCheckNumber {
 
 	@Test
