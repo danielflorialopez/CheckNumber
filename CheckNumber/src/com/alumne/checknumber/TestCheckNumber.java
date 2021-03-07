@@ -7,8 +7,38 @@ import org.junit.jupiter.api.Test;
 class TestCheckNumber {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testPositiu() {
+		CheckNumber checknumber;
+		double resultatEsperat, resultatActual;
+		
+		checknumber = new CheckNumber(5);
+		resultatEsperat = 1;
+		resultatActual = checknumber.comprovaSigne();
+		
+		assertEquals(resultatEsperat, resultatActual, "Test passat. Número positiu");
 	}
-
+	
+	@Test
+	void testNegatiu() {
+		CheckNumber checknumber;
+		double resultatEsperat, resultatActual;
+		
+		checknumber = new CheckNumber(-5);
+		resultatEsperat = -1;
+		resultatActual = checknumber.comprovaSigne();
+		
+		assertEquals(resultatEsperat, resultatActual,  "Test passat. Número negatiu");
+	}
+	
+	@Test
+	void testIguals() {
+		CheckNumber checknumber;
+		double resultatEsperat, resultatActual;
+		
+		checknumber = new CheckNumber(0);
+		resultatEsperat = 0;
+		resultatActual = checknumber.comprovaSigne();
+		
+		assertEquals(resultatEsperat, resultatActual, "Test passat. Zero");
+ 	}
 }
